@@ -1,0 +1,298 @@
+
+/*
+Miket adunk meg itt 
+body, h1, h2, stb. p 
+ezeknek általában adunk egy margin-t és egy font-family-t!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+variables.css-ben megcsináltuk ezeket a dologokat :roots-ban 
+itt pedig ennek a segítségével, felhasználjuk azt az értéket, amit ott csináltunk 
+készítünk itt különféle class-okat 
+margin, padding, container-re illetve háttérszín, betűszínre is!!!! 
+csinálunk font-size-okat és height-okat is, amit majd megadunk egy div-nek és ezzel tudjuk eltávolítani
+bizonyos részeket 
+center-text -> text-align: center, ezt még sokat használjuk 
+*/
+
+body {
+    font-family: "Open Sans", sans-serif; 
+    /*
+    font-family-t itt lehet beállítani, ebben a formában!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    */
+    margin-bottom: 25px; /*hogy legyen egy kis hely alul, a content ne menjen le mindig teljesen*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    margin:10px 0;
+}
+
+p {
+    padding:10px 0;
+}
+
+.container-xs {
+    max-width:var(--width-xs);
+    margin:auto;
+}
+
+.container-sm {
+    max-width:var(--width-sm);
+    margin:auto;
+}
+
+.container-md {
+    max-width:var(--width-md);
+    margin:auto;
+}
+
+.container-lg {
+    max-width:var(--width-lg);
+    margin:auto;
+}
+
+.container-xl {
+    max-width:var(--width-xl);
+    margin:auto;
+}
+
+.p-xs {
+    padding:max(var(--spacing-xs), 0.3vw);
+}
+
+.p-sm {
+    padding:max(var(--spacing-sm), 0.5vw);
+}
+
+.p-md {
+    padding:max(var(--spacing-md),0.8vw);
+}
+
+.p-lg {
+    padding:max(var(--spacing-lg), 1vw);
+}
+
+.p-xl {
+    padding:max(var(--spacing-xl), 1.2vw);
+}
+
+.m-xs {
+    margin:max(var(--spacing-xs), 0.3vw);
+}
+
+.m-sm {
+    margin:max(var(--spacing-sm), 0.5vw);
+}
+
+.m-md {
+    margin:max(var(--spacing-md), 0.8vw);
+}
+
+.m-lg {
+    margin:max(var(--spacing-lg), 1vw);
+}
+
+.m-lg {
+    margin:max(var(--spacing-xl), 1.2vw);
+}
+
+.bg-light-beige {
+    background-color:var(--light-beige);
+}
+
+.bg-beige {
+    background-color:var(--beige);
+}
+
+.bg-light-brown {
+    background-color:var(--light-brown);
+}
+
+.bg-light-grey {
+    background-color:var(--light-grey);
+}
+
+.bg-light-grey-2 {
+    background-color:var(--light-grey-2);
+}
+
+.bg-dark-grey {
+    background-color:var(--dark-grey);
+}
+
+.bg-white {
+    background-color:white;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.color-light-beige {
+    color:var(--light-beige);
+}
+
+.color-beige {
+    color:var(--beige);
+}
+
+.color-light-brown {
+    color:var(--light-brown);
+}
+
+.color-light-grey {
+    color:var(--light-grey);
+}
+
+.color-dark-grey {
+    color:var(--dark-grey);
+}
+
+.color-white {
+    color:white;
+}
+
+.color-black {
+    color:black;
+}
+
+.vertical-text {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    text-align: center;
+    transform: rotate(180deg);
+    font-weight: bold;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.center-text {
+    text-align: center!important;
+}
+
+.justify-text {
+    text-align: justify!important;
+}
+
+.left-text {
+    text-align:left!important;
+}
+
+.right-text {
+    text-align: right!important;
+}
+
+.font-xs {
+    font-size: 10px;
+}
+
+.font-sm {
+    font-size: 13px;
+}
+
+.font-md {
+    font-size: 16px;
+}
+
+.font-lg {
+    font-size: 19px;
+}
+
+.font-xl {
+    font-size: 25px;
+}
+
+.font-xxl {
+    font-size: 30px;
+}
+
+.divider {
+    width:100%;
+    clear:both;
+}
+
+.height-5 {
+    height: 5px;
+}
+
+.height-10 {
+    height: 10px;
+}
+
+.height-20 {
+    height: 20px;
+}
+
+.height-40 {
+    height: 40px;
+}
+
+.height-60 {
+    height: 60px;
+}
+
+.height-80 {
+    height: 80px;
+}
+
+.height-100 {
+    height: 100px;
+}
+
+.vh-25 {
+    height:25vh!important;
+}
+
+.weight-bold {
+    font-weight: bold;
+}
+
+.devider {
+    width: 100%;
+    /*
+    lehet ezt írni de általában olyan elemeket használunk, amik 100% szélessek alapból 
+    */
+    clear: both; 
+    /*
+    ez legtöbb esetben azért nem szükséges, mert flexbox-ot vagy grid-et használunk
+    mert az sokkal flexibilisebb, mint a float left vagy right 
+    */
+}
+
+.height-5 {
+    height: 5px;
+}
+
+.height-10 {
+    height: 10px;
+}
+
+.height-20 {
+    height: 20px;
+}
+
+.height-40 {
+    height: 40px;
+}
+
+.height-60 {
+    height: 60px;
+}
+
+.height-80 {
+    height: 80px;
+}
+
+.height-100 {
+    height: 100px;
+}
+/*
+Ez sokkal egyszerübb ha scss-vel csináljuk meg ezeket a class-eket 
+*/
+.vh-25 {
+    height: 25vw!important;
+}
+
+.weight-bold {
+    font-weight: bold;
+}

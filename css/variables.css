@@ -1,0 +1,18 @@
+:root {
+    --light-beige:#f1ebe9;
+    --beige:#e2ddd9;
+    --light-brown:#db9457;
+    --light-grey:#edeeed;
+    --light-grey-2:#f6f6f7;
+    --dark-grey:#242424;
+    --spacing-xs:3px;
+    --spacing-sm:5px;
+    --spacing-md:10px;
+    --spacing-lg:15px;
+    --spacing-xl:20px;
+    --width-xs:640px;
+    --width-sm:720px;
+    --width-md:960px;
+    --width-lg:1080px;
+    --width-xl:1280px;
+}

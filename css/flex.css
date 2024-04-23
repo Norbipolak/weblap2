@@ -1,0 +1,66 @@
+.flex {
+    display:flex;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-space-between {
+    justify-content: space-between;
+}
+
+.jc-space-around {
+    justify-content: space-around;
+}
+
+.jc-space-evenly {
+    justify-content: space-around;
+}
+
+.flex-dir-column {
+    flex-direction: column;
+}
+
+.flex-dir-column-reverse {
+    flex-direction: column-reverse;
+}
+
+.flex-dir-row {
+    flex-direction: row;
+}
+
+.flex-dir-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+/*
+justify-content ->
+1. center
+2. space-between
+3. space-evenly
+4. space-around
+
+flex-direction 
+1. column 
+2. column-reverse
+3. row (alapértelmezett)
+4. row-reverse
+
+flex-wrap
+1. wrap 
+2. wrap-reverse
+3. nowrap (alapértelmezett, nem dobja le vagy fel az elemeket)
+*/

@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "flex.css";
+@import "grid.css";
+@import "init.css";
+@import "inputs.css";
+@import "variables.css";
+@import "settings.css";
+
+/*
+Fontos, hogy amikor font-okat szeretnénk importálni, akkor azt csak ide bemásoljuk a google fonts-ról vagy még azt lehet csinálni, 
+hogy a html szerkezetbe is be lehet másolni linkelni
+
+A google fonts-nál van egy olyan lehetőség, hogy import vagy link, ha import akkor ide kell beimportálni, ha viszont link 
+akkor meg a html szerkezetbe!!!! 
+*/
+
+.upper-line {
+    height:40px;
+    background-color: var(--dark-grey);
+    position: relative;
+}
+
+.upper-line-text {
+    position: absolute;
+    text-transform: uppercase;
+    color: white;
+    right: 0;
+    left: 0;
+    margin: auto;
+    max-width: 300px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+/*
+fontos,
+1. vertikálisan, akkor viszi középre, ha van egy height-ja, ami ugyanakkora, mint a szűlőelem height-ja és ugyanakkora line-height 
+    ez csak akkor ha azt választjuk, hogy a szűlőelem a relative, child pedig relative
+2. kell egy max-heigth, ha azt szeretnénk, hogy left: 0, right: 0, margin: auto középre vigye!!!! 
+3. text-align pedig azért kell, hogyha már van egy width-je, akkor abban középen legyen a szöveg 
+*/
+.social-media-links {
+    position: absolute;
+    right: 15px;
+    height: 40px;
+    width: 100px;
+    line-height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*
+fontos itt, hogy ez is absolute legyen (csak a szűlőelem relative)
+- height, line-height ugyanakkora legyen mint a szűlőelemnek 
+- legyen egy width-je 
+- RIGHT: 15px -mert ezt nem középre, hanem jobbra szeretnénk elhelyezni 
+- display: flex justify-content: space-evenly, hogy a benne lévő a tag-ek szépen egymás mellett azonos távolságban helyezkedjenek el!!!! 
+*/
+
+.white-link {
+    text-decoration: none;
+    color: white;
+}
+
+/*
+a-nak kell adni, hogy leszedje a link-ekről az aláhúzást és a kék color helyett legyen egy fehér!!!!! 
+*/
+nav {
+    height: 92px;
+    display: flex;
+    align-items: center;
+}
+
+.center-nav {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto; 
+    /*
+    nagyon fontos hogy középen legyen a nav-ban ez a center-nav horizontálisan, vertikálisan már középen
+    van a nav-ban megadott display: flex és align-items: center miatt!!! 
+    */
+    height: 60px;
+    /*
+    hogy, kicsit lejjebb jöjjenek a dolgok, mert egy 92px-es nav-ban lesz ez a 60px-es center-nav
+    */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+/*
+ugye a nav ul-ben vannak a listák 
+és fontos, hogy ezeket azt szeretnénk, hogy egymás alatt legyenek, azért kell a flex!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+
+nav li {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    /*
+    Van egy height-ja és így lehet középre helyezni az a-kat vertikálisan, hogy align-items: center!!!!
+    ugyanez történik a nav-ban is!!!!!!
+    és ha ez van, akkor nem kell a list-style: none!!!!
+    */
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 15px; /*ezzel lehet eltávolítani az elemeket egymástól*/
+    text-transform: uppercase;
+}
+
+.menu-logo {
+    height: 60px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+Together, these CSS rules create a menu logo container (menu-logo) with fixed dimensions (60px height and 100px width) 
+that uses flexbox to center its content both horizontally and vertically. 
+The image within the menu logo (menu-logo img) fills the available space within the container.
+
+Fontos, hogy legyen egy height-ja meg egy width-je, a height az ugyanakkora, mint a center-nav-nak a height-ja!!!! 
+flex justify-content: center align-items center-vel pedig középre tesszük horizontálisan és vertikálisan is!! 
+*/
+
+.menu-logo img {
+    width: 100%;
+}
+
+/*
+a div-en belüli img-re mindig azt kell megadni, hogy width: 100%!!!!!!!
+*/
+
+header {
+    height: 30vw; /*ezzel nagyon jól responsive be lehet állítani a magasságot*/
+    background-image: url(../images/menu-header.jpg); /*..ki kell jönni és úgy bemenni az images-be*/
+    background-size: 100%;/*ha ez nincsen beállítva, akkor nagyon rosszul fog kinézni, ha mondjuk nagyobb a kép*/
+    background-position: center;/*ezzel meg középre helyezzük a képet*/
+}
+
+/*
+azt szeretnénk, hogy a header-ből a header-markerting ne sok részt foglaljon el, ezért a max-width: 350px;
+*/
+
+.header-marketing {
+    max-width: 350px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-gap: 10px;
+}
+
+.header-marketing h2 {
+    font-size: 40px;
+}
+
+.brown-devider {
+    width:2px;
+    height:50px;
+    background-color:var(--light-brown);
+    margin:15px auto;
+}
+
+.img-holder img {
+    width: 100%;
+}
+
+.coffee-bag {
+    cursor: pointer;
+    position: relative;
+}
+
+.coffee-bag:hover, .select-options {
+    opacity: 1;
+    bottom: 0px; /*így lehet, hogy ugyanolyan magas legyen, mint széles!!!!!*/
+}
+
+.select-options {
+    opacity: 0;
+    transition: all 0.5 ease;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.coffee-information {
+    height: 80px;
+}
+
+.coffee-cup-black-bg, .leaf-bg, .coffee-bean-iced-coffee {
+    background-size:100% auto;
+    background-position: center;
+}
+
+.coffee-cup-black-bg {
+    background-image: url("../images/coffeebean-coffee-cup-black.jpg");
+}
+
+.leaf-bg {
+    background-image: url("../images/leaf.jpg");
+}
+.coffee-bean-iced-coffee {
+    background-image: url("../images/coffeebean-iced-coffee-1.jpg");
+}
+
+.learn-more-box {
+    height: 30vw;
+    display:flex;
+    align-items: center;
+}
+
+.learn-more-inner-box {
+    width: 80%;
+    height: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.playfair-font {
+    font-family: "Playfair Display", serif;
+}
+
+.square {
+    padding-bottom: 100%; 
+    /*
+    ez nagyon fontos, ha nem szeretnénk megadni magasságot
+    mert ez olyan magas lesz mint széles 
+    */
+}
+
+.center-bg {
+    background-size: 100%;
+    background-position: center;
+}
+
+#cookie-1 {
+    background-image: url(../images/coffee-2.jpg); /*fontos itt a ..val kezdeni, hogy kimenjünk a könyvtárból!!*/
+}
+
+#cookie-2 {
+    background-image: url(../images/cookie_2.jpg);
+}
+
+#cookie-3 {
+    background-image: url(../images/cookie_3.jpg);
+}
+
+#cookie-4 {
+    background-image: url(../images/cookie_4.jpg);
+}
+
+#cookie-5 {
+    background-image: url(../images/cookie.jpg);
+}
+
+#cookie-6 {
+    background-image: url(../images/newspaper.jpg);
+}
+
+footer li {
+    list-style: none;
+    height: 35px;
+    line-height: 35px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
